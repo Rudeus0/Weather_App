@@ -9,6 +9,13 @@ weatherForm.addEventlistener("submit", event =>{
 
     const city = cityInput.value;
 
+    if(city){
+
+    }
+    else{
+        displayError("please enter a city");
+    }
+    
 });
 
 async function getWeatherData(){
@@ -26,6 +33,6 @@ function displayError(message){
 
     card.textContent = "";
     card.computedStyleMap.dispaly = "flex";
-    card.appendChild();
+    card.appendChild(errorDisplay);
 
 }
